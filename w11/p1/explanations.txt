@@ -1,0 +1,33 @@
+/*
+CH-230-A
+a10p1.cpp
+Lars Schuster
+lschuster@jacobs-university.de
+*/
+
+a)
+    If the namespace std is commented out,
+    there are many errors for the declaration and the use of strings
+        error: ‘string’ was not declared in this scope;
+        error: ‘endl’ was not declared in this scope;
+    The errors occur because the string class is definded in the namespace std.
+    Without including the namespace or a prefix the class cannot be used.
+    To fix that everytime the keyword "string" is used write "std::string" 
+    instead.
+
+    The same errors apply for the "cin" and "cout" and "endl" keywords
+        error: ‘cin’ was not declared in this scope;
+        error: ‘cout’ was not declared in this scope
+        error: ‘endl’ was not declared in this scope;
+    the streams are not defined w/o the namespace so a "std::" has to be 
+    prepended.
+
+b)
+    If the "Critter:: is removed for the methods the programm does not know
+    that the function is performed in the class. It will try to perform 
+    the function like a regular function.
+        error: ‘name’ was not declared in this scope;
+    The programm cannot know what data is stored in the Critter and the variable
+    will not be definded in the function.
+    This could be fixed by creating the methods in the header file 
+    within the class.

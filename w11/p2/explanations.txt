@@ -1,0 +1,19 @@
+/*
+CH-230-A
+a10p1.cpp
+Lars Schuster
+lschuster@jacobs-university.de
+*/
+
+a)
+    There are many errors for the declaration and the use of strings
+    The string class is not definded w/o the namespace std
+    To fix that everytime the keyword "string" is used write "std::string" 
+    instead.
+
+    The same errors apply for the "cin" and "cout" and "endl" keywords
+    the streams are not defined w/o the namespace so a "std::" has to be 
+    prepended
+b)
+    
+
