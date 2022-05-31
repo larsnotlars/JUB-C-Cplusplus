@@ -21,10 +21,13 @@ int main()
         {
             break;//end loop if string is stop
         }
+        arr[strlen(arr)-1] = '\0';
         scanf("%c",&a);
         getchar();
         scanf("%c",&b);//get chars for replacements
         getchar();
+        printf("Replace all ocurances of \"%c\" in \"%s\" with \"%c\":\n"
+        , a, arr, b);
         replaceAll(arr,a,b);//call function
         printf("%s\n",arr);
     }

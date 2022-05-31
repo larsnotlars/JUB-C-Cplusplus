@@ -17,6 +17,12 @@ int main()
     float *arr;
     scanf("%d",&n);//read size now
     arr = (float*) malloc(sizeof(int)*n);//alloc arr of size n
+    if (arr == NULL)
+    {
+        printf("cannot allocate memory\n");
+        exit(1);
+    }
+    
     for (int i = 0; i < n; i++)
     {
         scanf("%f",&arr[i]);//scan values for all elements
