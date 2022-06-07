@@ -201,23 +201,41 @@ double Rectangle::area()//area method
 //normal constructor
 Square::Square(const std::string& n, double nx, double ny, double nside)
 	:Rectangle(n,nx,ny,nside,nside)
-{}
+{
+	side = nside;
+}
 
 //default constructor
 Square::Square()
 	:Rectangle("defaultsquare",0,0,1,1)
-{}
+{
+	side = 1;
+}
 
 //copy constructor
 Square::Square(const Square &og):Rectangle(og)
-{}
+{
+	side = og.side;
+}
 
 void Square::setside(double newside)//setter
 {
 	side = newside;
+	this->height = newside;
+	this->width = newside;
 }
 
 double Square::getside()//getter
 {
 	return side;
+}
+
+double Square::perimeter() // perimeter method
+{
+	return side * 4;
+}
+
+double Square::area() // area method
+{
+	return side * side;
 }

@@ -90,6 +90,7 @@ class Rectangle : public RegularPolygon
 
 		double perimeter();
 		double area();//service functions
+		friend class Square;
 };
 
 class Square : public Rectangle
@@ -103,5 +104,8 @@ class Square : public Rectangle
 
 		void setside(double newside);//setter
 		double getside();//getter
+
+		double perimeter();
+		double area(); // service functions
 };
 #endif
