@@ -36,7 +36,7 @@ void pop(struct stack *astack)
 }
 
 //takes pointer to stack
-void empty(struct stack *astack,int input)
+void empty(struct stack *astack,unsigned int input)
 {
     printf("The binary repretsentation of %d is ",input);
     while (astack->count > 0)
@@ -62,10 +62,11 @@ void isempty(struct stack *astack)
 //converts decimal number to binary
 void dectobin(struct stack *astack,unsigned int input)
 {
+    unsigned int temp = input;
     while (input!=0)
     {//until every number ist represented put the bin numbers in stack 
         push(astack,input%2); // first to last into the stack
         input = input/2;
     }
-    empty(astack,(int)input);//empty stack to get the numbers in the right order
+    empty(astack,temp);//empty stack to get the numbers in the right order
 }

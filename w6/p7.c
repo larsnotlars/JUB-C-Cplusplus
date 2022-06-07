@@ -15,6 +15,11 @@ int main()
     getchar();
     scanf("%[^\n]",str2);//reads second string
     str3 = (char*)malloc((sizeof(char)*(strlen(str1)+strlen(str2))));
+    if (str3 == NULL)
+    {
+        printf("cannot allocate memory\n");
+        exit(1);
+    }
     //alloc space for exactly the two strings
     strcat(str3,str1);//concat str1 into str3
     strcat(str3,str2);//concat str2 into str3

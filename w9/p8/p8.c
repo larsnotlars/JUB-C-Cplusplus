@@ -26,7 +26,7 @@ int main()
         printf("Cannot open files");
         exit(1);
     }
-    int count;
+    int count = 0;
     char c;
     while (!feof(inp))
     {

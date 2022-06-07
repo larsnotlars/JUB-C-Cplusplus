@@ -11,25 +11,32 @@ l.schuster@jacobs-university.de
 int main()
 {
     int n;
-    char fname[100];
     FILE *inp ,*oup;
     char buffer[64];//only use one buffer
     long l;// var to store size of chunks
 
     scanf("%d",&n);//read number of files to concat
     getchar();
-    oup = fopen("output.txt", "w");//create output file
+    oup = fopen("output.txt", "wb");//create output file
     if (oup == NULL)
     {
         printf("Cannot open file");
         exit(1);
     }
     
+    char filenames[n][100];
+
+    for (int i = 0; i < n; i++)
+    {
+        fgets(filenames[i], sizeof(filenames[i]), stdin); // read name
+        filenames[i][strlen(filenames[i]) - 1] = '\0';
+    }
+    printf("Concating the content of %d files ...\n",n);
+    printf("The result is:\n");
+
     for (int i = 0; i < n; i++)
     {//for n files
-        fgets(fname, sizeof(fname), stdin);//read name
-        fname[strlen(fname)-1]='\0';
-        inp = fopen(fname, "r");//open corresponding file
+        inp = fopen(filenames[i], "rb");//open corresponding file
         if (inp == NULL)
         {
             printf("Cannot open files 1");
@@ -41,5 +48,7 @@ int main()
         fwrite("\n",1,1,oup);
         fclose(inp);//close input file
     }
+    printf("The result was written into output.txt\n");
+    fclose(oup);
     return 0;
 }

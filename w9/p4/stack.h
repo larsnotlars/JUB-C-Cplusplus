@@ -11,6 +11,6 @@ struct stack {
 
 void push(struct stack *astack,int input);
 void pop(struct stack *astack); 
-void empty(struct stack *astack, int input);
+void empty(struct stack *astack,unsigned int input);
 void isempty(struct stack *astack);
 void dectobin(struct stack *astack, unsigned int input);

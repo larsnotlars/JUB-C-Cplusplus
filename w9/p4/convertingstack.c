@@ -10,7 +10,7 @@ l.schuster@jacobs-university.de
 
 int main()
 {
-    int input;
+    unsigned int input;
     struct stack thestack;
     thestack.count = 0;//initialize input and stack
     scanf("%d",&input);//scan input
