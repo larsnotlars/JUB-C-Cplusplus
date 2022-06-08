@@ -8,18 +8,18 @@ lschuster@jacobs-university.de
 #include <iostream>
 #include "fraction.h"
 
-Fraction::Fraction()
+Fraction::Fraction()//standard constructor 
 {
 	num = 1;
-	den = 1;
+	den = 1;//creates 1 fraction
 }
 
-Fraction::Fraction(int n, int d)
+Fraction::Fraction(int n, int d)//parametric constructor
 {
-	int tmp_gcd = gcd(n, d);
+	int tmp_gcd = gcd(n, d);//like the given formular
 
 	num = n / tmp_gcd;
-	den = d / tmp_gcd;
+	den = d / tmp_gcd;//enters the values
 }
 
 //recursive function for finding the gcd(tail recursion for efficiency)
@@ -31,10 +31,9 @@ int Fraction::gcd(int a, int b)
         {return gcd(b, (a % b)); }
 }
 
-int Fraction::lcm(int a, int b)
+int Fraction::lcm(int a, int b)//finds lowest common multiple
 {
 	return a * b / gcd(a, b);
-
 }
 
 void Fraction::print()

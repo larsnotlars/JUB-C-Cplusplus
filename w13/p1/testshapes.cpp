@@ -11,7 +11,7 @@ lschuster@jacobs-university.de
 int main()
 {
     Hexagon hex1("blue hexagon",0,0,9,"blue");
-    Hexagon hex2("green hexagon",0,0,15,"blue");
+    Hexagon hex2("green hexagon",0,0,15,"green");
     Hexagon hex3(hex2);//Create the three hexagons
 
     hex1.printName();

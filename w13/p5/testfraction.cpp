@@ -9,7 +9,7 @@ lschuster@jacobs-university.de
 
 using namespace std;
 
-int main(void)
+int main()
 {
     Fraction a,b,sum,dif;
 
@@ -18,14 +18,14 @@ int main(void)
     cin >> b;
     cout << b <<std::endl;//create and print fractions a and b
 
-    if (a > b)
+    if (a > b)//use bool operator of class
         std::cout <<"The greater fraction is " << a << std::endl;
     else if(a < b)
         std::cout << "The greater fraction is " << b << std::endl;
     else
         std::cout << "The fractions are equal " << std::endl; 
 
-    sum = a+b;
+    sum = a+b;//use overriden operators
     dif = a-b;
 
     std::cout << "The sum is: " << sum <<std::endl;

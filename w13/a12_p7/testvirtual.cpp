@@ -11,6 +11,7 @@ using namespace std;
 #include "Ring.h"
 #include "Rectangle.h"
 #include "Square.h"
+#include "time.h"
  
 int main() {
 	srand(time(NULL));//set random number seed to time
@@ -39,18 +40,21 @@ int main() {
 			ptr = new Ring(colors[color],sizea,inner);
 			ptr->getColor();
 			cout << "\nArea: " << ptr->calcArea() << endl;
+			cout << "\nPerimeter" << ptr->calcPeri() << endl; // perimeter
 			delete ptr;
 			break;
 		case 2://rectangle (same as Circle)
 			ptr = new Rectangle(colors[color],sizea,sizeb);
 			ptr->getColor();
 			cout << "\nArea: " << ptr->calcArea() << endl;
+			cout << "\nPerimeter" << ptr->calcPeri() << endl; // perimeter
 			delete ptr;
 			break;
 		case 3://square (same as Circle)
 			ptr = new Square(colors[color],sizea);
 			ptr->getColor();
 			cout << "\nArea: " << ptr->calcArea() << endl;
+			cout << "\nPerimeter" << ptr->calcPeri() << endl; // perimeter
 			delete ptr;
 			break;
 		default:

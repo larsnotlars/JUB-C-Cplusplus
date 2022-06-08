@@ -49,7 +49,7 @@ void erryeet(int a)
         throw true;
         break;
     default://default is own exception
-        OwnException exep("Default case exception");
+        OwnException exep("OwnException\n");
         throw exep;
         break;
     }
@@ -78,7 +78,7 @@ int main()
         }
         catch(OwnException& d)
         {
-            std::cerr << "Caught in main:"<< d.what() << '\n';
+            std::cerr << "Caught in main:"<< d.what();
         }
     }
 

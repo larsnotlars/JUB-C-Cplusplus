@@ -29,7 +29,7 @@ int main()
     {
         std::cout << "Enter filename:"<< std::endl;
         std::cin >> fname;
-        std::ifstream in(fname);//open entered file
+        std::ifstream in(fname,std::ios::binary);//open entered file
         if (!in.good())
         {
             std::cerr << "Cannot open file";
